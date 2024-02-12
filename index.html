@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testeee</title>
+    <style>
+        * {font-family: sans-serif; box-sizing: border-box; margin: 0; padding: 0; list-style: none;}
+        main{
+            display: flex;
+            padding: 25px 50px;
+            gap: 55px;
+            height: 100vh;
+        }
+        #add-input, #resultado, #log{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .resultado{
+            margin-top: 55px;
+            display: flex;
+            gap: 100px;
+        }
+        #acima{
+            width: 50%;
+        }
+        #abaixo{
+            width: 50%;
+        }
+        .direita{
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+
+        <div class="esquerda">
+            <p>Coloquei abaixo as campanhas:</p>
+    
+            <br>
+    
+            <ul id="add-input">
+            </ul>
+    
+            <br>
+    
+            <button onclick={novoDado()}>Adicionar</button>
+    
+            <select name="" id="select">
+                <option value="conversao">Conversão</option>
+                <option value="cpa">CPA</option>
+            </select>
+    
+            <button onclick={calcular()}>Fazer calculo</button>
+    
+            <div class="resultado">
+                <ul id="acima">
+                    <p>Acima</p>
+                </ul>
+                <ul id="abaixo">
+                    <p>Abaixo</p>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="direita">
+            <p>Contas abaixo</p>
+            <ul id="log"></ul>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
